@@ -1,0 +1,13 @@
+#startbutton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: grey;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startbutton:hover {
+    background-color: blueviolet;
+}
