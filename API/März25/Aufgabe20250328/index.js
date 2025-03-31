@@ -42,7 +42,7 @@ app.post("/filme", (req, res) => {
             return res.status(400).json({ error: "Name muss mindestens drei Buchstaben enthalten!" });
         }
         const newFilm = {
-            id: filme.length > 0 ? Math.max(...filme.map(f => f.id)) +1 : 1,
+            id: filme.length > 0 ? Math.max(...filme.map(f => f.id)) + 1 : 1,
             title: title,
             year: year
         }
@@ -84,28 +84,41 @@ app.delete("/filme/:id", (req, res) => {
         }
         const entfernterFilm = filme.splice(index, 1)
         writeFile(filme)
-        res.json("erfolgreich gelöscht: " + entfernterFilm[0].name)
+        res.json("Erfolgreich gelöscht: " + entfernterFilm[0].title)
     } catch (err) {
         res.status(500).json({ error: "Internal Server error!" })
     }
 })
 
-app.get("/search", (req, res) => {
-    const { id, title, year } = req.query;
-    let filme = readFile();
-    if (id) {
-        filme = filme.filter((film) => film.id == id);
-    }
-    if (title) {
-        filme = filme.filter((film) => film.title.toLowerCase().includes(title.toLowerCase()));
-    }
-    if (year) {
-        const yearNumber = parseInt(year);
-        if (!isNaN(yearNumber)) {
-            filme = filme.filter((film) => film.year === yearNumber);
+app.get("/filme/search", (req, res) => {
+    try {
+        const { id, title, year } = req.query;
+        let filme = readFile();
+
+
+        if (id) {
+            const idNumber = parseInt(id, 10);
+            if (!isNaN(idNumber)) {
+                filme = filme.filter((film) => film.id === idNumber);
+            }
         }
+
+        if (title) {
+            filme = filme.filter((film) => film.title.toLowerCase().includes(title.toLowerCase())
+            );
+        }
+
+        if (year) {
+            const yearNumber = parseInt(year, 10);
+            if (!isNaN(yearNumber)) {
+                filme = filme.filter((film) => film.year === yearNumber);
+
+            }
+        }
+        res.json(filme);
+    }catch (err) {
+        res.status(500).json({error: `Internal Serverfehler: ${err.message}`});
     }
-    res.json(filme);
-})
+    });
 
 app.listen(5005);
