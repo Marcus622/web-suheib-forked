@@ -1,8 +1,11 @@
-const { error } = require("console");
+const cors = require("cors");
 const express = require("express");
 const app = express();
 const fs = require("fs");
 app.use(express.json());
+app.use(cors({
+    origin: "http://localhost:5500"
+}))
 
 function readFile() {
     const data = fs.readFileSync("filme.json", "utf-8");

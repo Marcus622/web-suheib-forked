@@ -2,81 +2,97 @@
   {
     "id": 1,
     "title": "Inception",
-    "year": 2010
+    "year": 2010,
+    "genre": "Science-Fiction, Thriller"
   },
   {
     "id": 2,
     "title": "The Matrix",
-    "year": 1999
+    "year": 1999,
+    "genre": "Science-Fiction, Action"
   },
   {
     "id": 3,
     "title": "Interstellar",
-    "year": 2014
+    "year": 2014,
+    "genre": "Science-Fiction, Drama"
   },
   {
     "id": 4,
     "title": "The Dark Knight",
-    "year": 2008
+    "year": 2008,
+    "genre": "Action, Thriller"
   },
   {
     "id": 5,
     "title": "Pulp Fiction",
-    "year": 1994
+    "year": 1994,
+    "genre": "Krimi, Drama"
   },
   {
     "id": 6,
     "title": "Fight Club",
-    "year": 1999
+    "year": 1999,
+    "genre": "Drama, Thriller"
   },
   {
     "id": 7,
     "title": "Forrest Gump",
-    "year": 1994
+    "year": 1994,
+    "genre": "Drama, Komödie"
   },
   {
     "id": 8,
     "title": "The Shawshank Redemption",
-    "year": 1994
+    "year": 1994,
+    "genre": "Drama"
   },
   {
     "id": 9,
     "title": "The Godfather",
-    "year": 1972
+    "year": 1972,
+    "genre": "Krimi, Drama"
   },
   {
     "id": 10,
     "title": "The Lord of the Rings: The Fellowship of the Ring",
-    "year": 2001
+    "year": 2001,
+    "genre": "Fantasy, Abenteuer"
   },
   {
     "id": 11,
     "title": "Star Wars: Episode IV - A New Hope",
-    "year": 1977
+    "year": 1977,
+    "genre": "Science-Fiction, Abenteuer"
   },
   {
     "id": 12,
     "title": "The Avengers",
-    "year": 2012
+    "year": 2012,
+    "genre": "Action, Science-Fiction"
   },
   {
     "id": 13,
     "title": "Jurassic Park",
-    "year": 1993
+    "year": 1993,
+    "genre": "Science-Fiction, Abenteuer"
   },
   {
     "id": 14,
     "title": "Titanic",
-    "year": 1997
+    "year": 1997,
+    "genre": "Drama, Romanze"
   },
   {
     "id": 15,
     "title": "Avatar",
-    "year": 2009
+    "year": 2009,
+    "genre": "Science-Fiction, Abenteuer"
   },
   {
     "id": 16,
-    "Title": "The Grand Budapest Hotel",
-    "Year": "2014"
+    "title": "The Grand Budapest Hotel",
+    "year": 2014,
+    "genre": "Komödie, Drama"
   }
 ]
