@@ -12,7 +12,7 @@ function App() {
           name="Burschi"
           art="Katzenhai"
           alter={3}
-          bild="http://www.google.com/url?sa=i&url=https%3A%2F%2Fs2k.de%2Fforum%2Fthread%2F19889-mein-neues-haustier-der-katzenhai%2F&psig=AOvVaw2DB-seWeK9yx5nTXuJvMUJ&ust=1744902865478000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjMvM7s3IwDFQAAAAAdAAAAABAE"        />
+          bild="https://www.google.com/url?sa=i&url=https%3A%2F%2Fs2k.de%2Fforum%2Fthread%2F19889-mein-neues-haustier-der-katzenhai%2F&psig=AOvVaw2DB-seWeK9yx5nTXuJvMUJ&ust=1744902865478000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjMvM7s3IwDFQAAAAAdAAAAABAE"        />
         <TierCard
           name="Bello"
           art="Hund"
