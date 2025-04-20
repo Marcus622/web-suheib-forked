@@ -1,22 +1,65 @@
-import './App.css';
+
+import React, { useState, useEffect } from 'react';
 import KlickZaehler from './components/KlickZaehler';
 import FarbWechsler from './components/FarbWechsler';
 import TextToggle from './components/TextToggle';
 import LiveTextVorschau from './components/LiveTextVorschau';
+import DarkModeToggle from './components/DarkModeToggle';
+import ResetButton from './components/ResetButton';
+
+
 
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const gespeicherterModus = localStorage.getItem("darkMode");
+    return gespeicherterModus === "true";
+  });
+
+  // Beim ersten Laden aus dem localStorage lesen
+  useEffect(() => {
+    const gespeicherterDarkMode = localStorage.getItem("darkMode");
+
+    if (gespeicherterDarkMode === "true") {
+      setIsDarkMode(true);
+    }
+  }, []);
+
+  // Beim ändern des DM in localStorage speichern
+
+useEffect(() => {
+  localStorage.setItem("darkMode", isDarkMode);
+}, [isDarkMode]);
+
+
+  // Umschaltfunktion
+  const toggleDarkMode = () => {
+    const neuerModus = !isDarkMode;
+    setIsDarkMode(neuerModus);
+    localStorage.setItem("darkMode", neuerModus);
+  };
+
+  const appStyle = {
+    backgroundColor: isDarkMode ? "#222" : "#f5f5f5",
+    color: isDarkMode ? "#f5f5f5" : "#222",
+    padding: "25px",
+    fontFamily: "Arial",
+    minHeight: "100vh",
+    transition: "all 0.3s ease"
+  };
 
   return (
-    <div style={{ padding: "25px", fontFamily: "Arial" }}>
+    <div style={appStyle}>
       <h1>Interaktive Elemente</h1>
-     <KlickZaehler />
-     <hr/>
-     <FarbWechsler />
-     <hr/>
-     <TextToggle />
-     <hr/>
-     <LiveTextVorschau />
+      <DarkModeToggle onToggle={toggleDarkMode} isDark={isDarkMode} />
+      <KlickZaehler />
+      <hr />
+      <FarbWechsler />
+      <hr />
+      <TextToggle />
+      <hr />
+      <LiveTextVorschau /> <ResetButton />
+      
     </div>
   );
 }

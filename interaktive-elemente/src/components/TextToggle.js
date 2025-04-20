@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function TextToggle() {
-    const [istSichtbar, setIstSichtbar] = useState(true);
+    const [istSichtbar, setIstSichtbar] = useState(() => {
+        const gespeicherterWert = localStorage.getItem("istSichtbar");
+        return gespeicherterWert === null ? true : gespeicherterWert === "true";
+    });
+
+    useEffect(() => {
+        localStorage.setItem("istSichtbar", istSichtbar);
+    }, [istSichtbar]);
 
     return (
         <div style={{ marginBottom: "20px"}}>

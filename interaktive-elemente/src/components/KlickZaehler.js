@@ -1,13 +1,34 @@
-import {useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function KlickZaehler() {
-  const [count, setCount] = useState(0);
+  const [clickCount, setClickCount] = useState(() => {
+    const gespeicherterClickCount = localStorage.getItem("clickCount");
+    return gespeicherterClickCount !== null ? Number(gespeicherterClickCount) : 0;
+  });
+
+  // Beim ersten Laden aus dem localStore den Klickzähler lesen
+
+  useEffect(() => {
+    localStorage.setItem("clickCount", clickCount);
+    }, [clickCount]
+   );
+
+  
+
+  // Klickzähler erhöhen
+
+  const incrementClickCount = () => {
+    setClickCount(prev => {
+      const neuerWert = prev + 1;
+      
+      return neuerWert;
+  });
+}
 
   return (
     <div style={{ padding: "25px", fontFamily: "Arial" }}>
-      <h2>Klickzähler</h2>
-      <p>Du hast {count} mal geklickt.</p>
-      <button onClick={() => setCount(count + 1)}>Klick mich</button>
+      <h2>Klickzähler: {clickCount}</h2>
+      <button onClick={incrementClickCount}>Klick mich</button>
     </div>
   );
 }
