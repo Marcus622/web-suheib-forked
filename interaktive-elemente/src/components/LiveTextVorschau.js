@@ -1,10 +1,14 @@
-import React, {useState } from "react";
+import React, {useEffect, useState } from "react";
 
 function LiveTextVorschau() {
     const [text, setText] = useState(() => {
         return localStorage.getItem("text")|| "";
     });
-    
+
+    useEffect(() => {
+        localStorage.setItem("text", text);
+
+    }, [text]);
 
     // Handler-Funktion für Eingabeänderung
     const handleChange = (event) => {
