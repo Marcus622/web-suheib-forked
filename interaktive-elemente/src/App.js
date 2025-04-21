@@ -6,6 +6,7 @@ import TextToggle from './components/TextToggle';
 import LiveTextVorschau from './components/LiveTextVorschau';
 import DarkModeToggle from './components/DarkModeToggle';
 import ResetButton from './components/ResetButton';
+import Akkordeon from './components/Akkordeon';
 
 
 
@@ -52,7 +53,10 @@ useEffect(() => {
     <div style={appStyle}>
       <h1>Interaktive Elemente</h1>
       <DarkModeToggle onToggle={toggleDarkMode} isDark={isDarkMode} />
+      <hr/>
       <KlickZaehler />
+      <hr/>
+      <Akkordeon />
       <hr />
       <FarbWechsler />
       <hr />
