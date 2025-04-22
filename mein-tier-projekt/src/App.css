@@ -1,4 +1,9 @@
-
+.animalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
 .App {
   text-align: center;

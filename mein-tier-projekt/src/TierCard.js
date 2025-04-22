@@ -17,5 +17,5 @@ function TierCard({ name, art, alter, bild }) {
     );
   }
   
-  export default TierCard;
+  // export default TierCard;
   
