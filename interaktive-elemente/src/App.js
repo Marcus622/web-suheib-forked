@@ -7,6 +7,7 @@ import LiveTextVorschau from './components/LiveTextVorschau';
 import DarkModeToggle from './components/DarkModeToggle';
 import ResetButton from './components/ResetButton';
 import Akkordeon from './components/Akkordeon';
+import KurioseFakten from './components/KurioseFakten';
 
 
 
@@ -53,6 +54,8 @@ useEffect(() => {
     <div style={appStyle}>
       <h1>Interaktive Elemente</h1>
       <DarkModeToggle onToggle={toggleDarkMode} isDark={isDarkMode} />
+      <hr/>
+      <KurioseFakten />
       <hr/>
       <KlickZaehler />
       <hr/>
