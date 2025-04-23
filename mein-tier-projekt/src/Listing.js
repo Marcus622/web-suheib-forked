@@ -8,7 +8,7 @@ function Listing(props) {
             <h3>Name: {props.Name}</h3>
             <h3>Alter: {props.Alter} Jahre</h3>
             <h3>Art: {props.Art}</h3>
-            <h3>Krankheit: {props.Krankheit}</h3>
+            <h3>Diagnose: {props.Krankheit}</h3>
             {/* <Link to="/">Leite zu Behandlung weiter</Link> */}
             </div>
     );

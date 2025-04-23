@@ -9,6 +9,11 @@ import Contact from './Contact';
 import Impressum from './Impressum';
 import Faq from './Faq';
 
+import PokemonList from './Pokemon/PokemonList';
+
+
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -19,9 +24,7 @@ root.render(
         <Route path="/Contact" element={<Contact></Contact>}></Route>
         <Route path="/Impressum" element={<Impressum></Impressum>}></Route>
         <Route path="/Faq" element={<Faq></Faq>}></Route>
-
-
-
+        <Route path="/Pokemon" element={<PokemonList></PokemonList>}></Route>
       </Routes>
     </Router>
   </React.StrictMode>
