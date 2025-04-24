@@ -21,7 +21,7 @@ const animals = [
     <div><Titel />
     <Navbar />
     <div className="animalContainer">
-      <Link to="/Pokemon">Pokemon</Link>
+      
       {animals.map((animal) => 
       <Listing key={animal.Id} Name={animal.Name} Alter={animal.Alter} Art={animal.Art} Diagnose={animal.Diagnose} image={animal.image}></Listing>
       )}

@@ -8,7 +8,7 @@ import Behandlung from './Behandlung'
 import Contact from './Contact';
 import Impressum from './Impressum';
 import Faq from './Faq';
-
+import Pokodex from './Pokemon/Pokodex';
 import PokemonList from './Pokemon/PokemonList';
 
 
@@ -25,6 +25,7 @@ root.render(
         <Route path="/Impressum" element={<Impressum></Impressum>}></Route>
         <Route path="/Faq" element={<Faq></Faq>}></Route>
         <Route path="/Pokemon" element={<PokemonList></PokemonList>}></Route>
+        <Route path="/Pokodex/:id" element={<Pokodex></Pokodex>}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

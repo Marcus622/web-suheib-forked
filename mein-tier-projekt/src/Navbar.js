@@ -28,6 +28,9 @@ function Navbar() {
    <NavLink to="/Faq" style={linkStyle} activeStyle={activeStyle}>FAQ</NavLink>
    <NavLink to="/Contact" style={linkStyle} activeStyle={activeStyle}>Kontakt</NavLink>
    <NavLink to="/Impressum" style={linkStyle} activeStyle={activeStyle}>Impressum</NavLink>
+   <NavLink to="/Pokemon/." style={linkStyle} activeStyle={activeStyle}>Pokemon</NavLink>
+
+
    </nav>
 
   )
