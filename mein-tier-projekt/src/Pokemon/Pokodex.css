@@ -1,0 +1,62 @@
+.pokodex-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  }
+  
+  .pokodex-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .pokodex-audio {
+    margin-top: 10px;
+  }
+  
+  .pokodex-name {
+    font-size: 2rem;
+    margin: 15px 0 5px;
+    color: #333;
+  }
+  
+  .pokodex-details p {
+    margin: 4px 0;
+    font-size: 1rem;
+  }
+  
+  .pokodex-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .pokodex-list li {
+    padding: 4px 0;
+  }
+  
+  h3 {
+    margin-top: 20px;
+    color: #555;
+  }
+  
+  .pokodex-back-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .pokodex-back-button:hover {
+    background-color: #1565c0;
+  }
+  
