@@ -1,12 +1,10 @@
-import logo from './logo.svg';
+import TierListe from './TierListe';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hallo</h1>
-    </div>
-  );
+    <TierListe />
+);
 }
 
 export default App;

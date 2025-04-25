@@ -1,6 +1,15 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
 const sqlite3 = require("sqlite3").verbose();
 // const db = new sqlite3.Database(":memory:");
 const db = new sqlite3.Database("./tiere.db");
+
+
+app.use(cors());
+app.use(express.json());
+    
+
 
 db.serialize(() => {
   createTableQuery = `CREATE TABLE IF NOT EXISTS tiere (
@@ -33,9 +42,7 @@ db.serialize(() => {
 });
 
 
-const express = require("express");
 
-const app = express();
 
 const PORT = 5005;
 app.use(express.json()) // Dieser Code ermöglicht uns einen Body in dem Request zu haben
